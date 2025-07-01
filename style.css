@@ -29,3 +29,6 @@ header {
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* melhora legibilidade */
 }
+.container{
+margin-top: 50px;
+}
