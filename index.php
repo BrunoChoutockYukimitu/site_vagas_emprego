@@ -2,9 +2,10 @@
 include "includes/cabecalho.php";
 include "includes/carrosel.php";
 ?>
-
-<div class="container">
+<div class="melhor">
     <h2 class="display-5">Empresas com melhores avaliações</h2>
+</div>
+<div class="container">
     <div class="row">
 
 
@@ -23,6 +24,7 @@ include "includes/carrosel.php";
                     <img src="<?= $linha['foto']; ?>" class="card-img-top img-formatada-lista">
                     <div class="card-body">
                         <h5 class="card-title"><?= $linha['nome']; ?></h5>
+                        <p class="card-text preco">Números de vagas: <?= $linha['vagas']; ?></p>
                         <p class="card-text preco">Avaliação: ⭐<?= $linha['avaliacao']; ?>/5</p>
                         <a href="umaEmpresa.php?id=<?= $linha['id']; ?>" class="btn btn-outline-danger">Ver Detalhes</a>
                     </div>

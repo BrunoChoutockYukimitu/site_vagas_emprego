@@ -1,34 +1,43 @@
-<?php include "cabecalho.php";
-include "includes/banner.php";
-$id = $_GET['id'];
-
+<?PHP
+include "includes/cabecalho.php";
+include "includes/carrosel.php";
 ?>
-<?php
-include "conexao.php";
+<div class="melhor">
+<h2 class="display-5">Empresas com melhores avaliações</h2>
+</div>
+<div class="container">
+    <div class="row">
 
-$sql = "select * from vagas_de_emprego order by id";
-$resultado = mysqli_query($conexao, $sql);
+
+        <?php
+        include "conexao.php";
+
+        $sql = "select * from empresa order by vagas desc";
+        $resultado = mysqli_query($conexao, $sql);
 
 
-while ($linha = mysqli_fetch_assoc($resultado)) {
-?>
-  <div class="container">
-    <div class="row mx-5 mt-5">
-      <div class="col">
-        <img src="<?= $linha['foto']; ?>" class="img-fluid" alt="filme_imagem">
-      </div>
-      <div class="col">
-        <h2 class="text-start"><?= $linha['nome']; ?></h2>
-        <h3>Área de trabalho <?= $linha['areaTrabalho']; ?></h3>
-        <p><strong>Descrição: </strong> <?= $linha['descricao']; ?> </p>
-        <p><strong>Número de vagas:</strong> <?= $linha['vagas']; ?></p>
-        <p>Avaliação: ⭐ <?= $linha['avaliacao']; ?>/5</p>
-        <p><strong>Contato: </strong> <?= $linha['contato']; ?></p>
-        <p><strong>Email: </strong> <?= $linha['email']; ?></p>
-      </div>
+        while ($linha = mysqli_fetch_assoc($resultado)) {
+        ?>
+
+            <div class="col-3 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="<?= $linha['foto']; ?>" class="card-img-top img-formatada-lista">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $linha['nome']; ?></h5>
+                        <p><strong>Números de vagas: </strong> <?= $linha['vagas']; ?></p>
+                        <p class="card-text preco"><strong>Avaliação:</strong> ⭐<?= $linha['avaliacao']; ?>/5</p>
+                        <a href="umaEmpresa.php?id=<?= $linha['id']; ?>" class="btn btn-outline-danger">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+        <?php
+        }
+
+        mysqli_close($conexao);
+        ?>
     </div>
-  </div>
+</div>
 <?php
-}
-mysqli_close($conexao);
+include "rodape.php"
 ?>

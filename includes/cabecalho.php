@@ -10,11 +10,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+
+    <body class="fundo">
     <header>
-        <h1>Work Hub</h1>
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="Vagas.php">Vagas</a>
-        </nav>
+        <div class="logo">
+            <img src="imagens/logo.png" class="logoimg">
+            <h1 class="nome">Work Hub</h1>
+        </div>
+        <div class="botao">
+            <a href="index.php" class="boton">Home</a>
+            <a href="Vagas.php" class="boton">Vagas</a>
+        </div>
     </header>

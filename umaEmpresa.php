@@ -11,22 +11,30 @@ $resultado = mysqli_query($conexao, $sql);
 
 while ($linha = mysqli_fetch_assoc($resultado)) {
 ?>
-  <div class="container" >
-    <div class="row mx-5 mt-5">
-      <div class="col">
-      <img src="<?= $linha['foto']; ?>" class="img-fluid" alt="Empresa_imagem">
-      </div>
-      <div class="col">
-        <h2 class="text-start"><?= $linha['nome']; ?></h2>
-      <p>Avaliação: ⭐<?= $linha['avaliacao']; ?>/5</p>
-      <p><strong>Desccrição: </strong> <?= $linha['descricao']; ?></p>
-      <p><strong>Area de trabalho: </strong> <?= $linha['areaTrabalho']; ?></p>
-      <p><strong>Números de vagas: </strong> <?= $linha['vagas']; ?></p>
-      <p><strong>Contato: </strong>+55 <?= $linha['contato']; ?> </p>
-      <p><strong>Email: </strong> <?= $linha['email']; ?></p>
+  <div class="container">
+
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="<?= $linha['foto']; ?>" class="img-fluid rounded-start" alt="Empresa_imagem">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><?= $linha['nome']; ?></h5>
+            <h5 class="card-title">>Avaliação: ⭐<?= $linha['avaliacao']; ?>/5</h5>
+            <p class="card-text">Desccrição: <?= $linha['descricao']; ?></p>
+            <p class="card-text"><small class="text-body-secondary">Area de trabalho: <?= $linha['areaTrabalho']; ?></small></p>
+            <p class="card-text"><small class="text-body-secondary">Números de vagas: <?= $linha['vagas']; ?></small></p>
+            <p class="card-text"><small class="text-body-secondary">Contato: +55 <?= $linha['contato']; ?> </small></p>
+            <p class="card-text"><small class="text-body-secondary">Email: <?= $linha['email']; ?></small></p>
+            <a href="contatar.php?id=<?= $linha['id']; ?>" class="btn btn-outline-danger">Contatar</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+
 <?php
 }
 mysqli_close($conexao);
