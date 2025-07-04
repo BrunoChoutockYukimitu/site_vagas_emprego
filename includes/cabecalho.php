@@ -10,12 +10,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
     <body class="fundo">
     <header>
         <div class="logo">
             <img src="imagens/logo.png" class="logoimg">
-            <h1 class="nome">Work Hub</h1>
         </div>
         <div class="botao">
             <a href="index.php" class="boton">Home</a>

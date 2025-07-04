@@ -3,7 +3,7 @@ include "includes/cabecalho.php";
 include "includes/carrosel.php";
 ?>
 <div class="melhor">
-<h2 class="display-5">Empresas com melhores avaliações</h2>
+<h2 class="display-5">Empresas com mais vagas</h2>
 </div>
 <div class="container">
     <div class="row">
