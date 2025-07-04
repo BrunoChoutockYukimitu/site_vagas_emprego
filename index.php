@@ -26,6 +26,7 @@ include "includes/carrosel.php";
                         <h5 class="card-title"><?= $linha['nome']; ?></h5>
                         <p class="card-text preco">Números de vagas: <?= $linha['vagas']; ?></p>
                         <p class="card-text preco">Avaliação: ⭐<?= $linha['avaliacao']; ?>/5</p>
+                        <p class="card-text preco">Área de trabalho: <?= $linha['areaTrabalho']; ?></p>
                         <a href="umaEmpresa.php?id=<?= $linha['id']; ?>" class="btn btn-outline-danger">Ver Detalhes</a>
                     </div>
                 </div>

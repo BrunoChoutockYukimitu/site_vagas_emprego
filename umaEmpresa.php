@@ -25,7 +25,7 @@ while ($linha = mysqli_fetch_assoc($resultado)) {
             <p class="card-text">Desccrição: <?= $linha['descricao']; ?></p>
             <p class="card-text"><small class="text-body-secondary">Area de trabalho: <?= $linha['areaTrabalho']; ?></small></p>
             <p class="card-text"><small class="text-body-secondary">Números de vagas: <?= $linha['vagas']; ?></small></p>
-            <p class="card-text"><small class="text-body-secondary">Contato: +55 <?= $linha['contato']; ?> </small></p>
+            
             <p class="card-text"><small class="text-body-secondary">Email: <?= $linha['email']; ?></small></p>
             <a href="contatar.php?id=<?= $linha['id']; ?>" class="btn btn-outline-danger">Contatar</a>
           </div>

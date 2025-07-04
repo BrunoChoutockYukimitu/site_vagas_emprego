@@ -1,7 +1,7 @@
 <?php
 /* inicio da conexão com o BD*/
 $servidor = 'localhost';
-$bd = 'vagas_de_emprego';
+$bd = 'bd_vagas_de_emprego';
 $usuario = 'root';
 $senha = '';
 $id = $_GET['id'] ?? 0;
